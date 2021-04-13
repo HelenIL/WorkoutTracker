@@ -1,7 +1,7 @@
 {
   "name": "mongoose_skeleton",
   "version": "1.0.0",
-  "description": "",
+  "description": "A full stack workout tracker application utilizing MongoDB, Mongoose, and Express.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,5 +15,13 @@
     "express": "^4.16.3",
     "mongoose": "^5.3.16",
     "morgan": "^1.9.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HelenIL/WorkoutTracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HelenIL/WorkoutTracker/issues"
+  },
+  "homepage": "https://github.com/HelenIL/WorkoutTracker#readme"
 }
