@@ -55,11 +55,13 @@ module.exports = function(app) {
     })
 
     app.get("/api/workouts/range", (req, res) => {
+        console.log("Range hit");
         db.Workout.find({})
         .then(workout => {
             res.json(workout);
         })
         .catch(err => {
+            console.log(err);
             res.json(err);
         });
     }); 
