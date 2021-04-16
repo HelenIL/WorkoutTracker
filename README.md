@@ -22,3 +22,25 @@ A consumer will reach their fitness goals more quickly when they track their wor
 
 ---
 
+<img src="assets/Create.png" alt="craete workout">
+<br><br>
+
+---
+
+<img src="assets/AddExercise.png" alt="add exercise">
+<br><br>
+
+---
+
+<img src="assets/Dashboard.png" alt="workout dashboard">
+<br><br>
+
+---
+
+# Credits/Contact
+
+Helen I. Lindberg<br>
+Email: helenilindberg@yahoo.com<br>
+Github Profile: <a href="https://github.com/HelenIL">https://github.com/HelenIL</a> 
+<br><br>
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
