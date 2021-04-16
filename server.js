@@ -1,7 +1,7 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
-require('dotenv').config()
+// require('dotenv').config()
 const app = express();
 const PORT = process.env.PORT || 3020;
 
@@ -11,22 +11,22 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 console.log("DB string", process.env.MONGODB_URI);
-mongoose.connect(
-    process.env.MONGODB_URI || 'mongodb://localhost/workout',
-    {
-      useNewUrlParser: true,
-      useFindAndModify: false,
-      useUnifiedTopology: true 
-    }
-  );
+// mongoose.connect(
+//     process.env.MONGODB_URI || 'mongodb://localhost/workout',
+//     {
+//       useNewUrlParser: true,
+//       useFindAndModify: false,
+//       useUnifiedTopology: true 
+//     }
+//   );
 
-// const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/workout';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/workout';
 
-// mongoose.connect(MONGODB_URI, {
-//   useNewUrlParser: true,
-//   useFindAndModify: false,
-//   useUnifiedTopology: true,
-// });
+mongoose.connect(MONGODB_URI, {
+  useNewUrlParser: true,
+  useFindAndModify: false,
+  useUnifiedTopology: true,
+});
 
 require("./routes/htmlRoutes")(app);
 require("./routes/apiRoutes")(app);
