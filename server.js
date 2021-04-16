@@ -1,7 +1,7 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
-
+require('dotenv').config()
 const app = express();
 const PORT = process.env.PORT || 3020;
 
@@ -10,7 +10,7 @@ app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
-
+console.log("DB string", process.env.MONGODB_URI);
 mongoose.connect(
     process.env.MONGODB_URI || 'mongodb://localhost/workout',
     {
@@ -29,7 +29,7 @@ mongoose.connect(
 // });
 
 require("./routes/htmlRoutes")(app);
-// require("./routes/apiRoutes")(app);
+require("./routes/apiRoutes")(app);
 
 app.listen(PORT, function() {
     console.log(`App running on port ${PORT}!`);
