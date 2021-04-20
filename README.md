@@ -43,4 +43,5 @@ Helen I. Lindberg<br>
 Email: helenilindberg@yahoo.com<br>
 Github Profile: <a href="https://github.com/HelenIL">https://github.com/HelenIL</a> 
 <br><br>
+Heroku deployed page: <a ref="https://workout-fitness-tracking-app.herokuapp.com/">
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
