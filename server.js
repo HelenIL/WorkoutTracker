@@ -1,7 +1,7 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
-// require('dotenv').config()
+require('dotenv').config()
 
 const PORT = process.env.PORT || 3020;
 
@@ -15,6 +15,9 @@ app.use(express.static("public"));
 
 app.use(require("./routes/apiRoutes.js"));
 app.use(require("./routes/htmlRoutes.js"));
+
+const uri = process.env.ATLAS_URI;
+mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex: true});
 
 mongoose.connect(
   process.env.MONGODB_URI || 'mongodb://localhost/workout',
