@@ -17,7 +17,7 @@ app.use(require("./routes/apiRoutes.js"));
 app.use(require("./routes/htmlRoutes.js"));
 
 const uri = process.env.MONGODB_URI;
-mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex: true});
+mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true});
 
 mongoose.connect(
   process.env.MONGODB_URI || 'mongodb://localhost/workout',
