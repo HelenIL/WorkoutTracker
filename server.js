@@ -16,7 +16,7 @@ app.use(express.static("public"));
 app.use(require("./routes/apiRoutes.js"));
 app.use(require("./routes/htmlRoutes.js"));
 
-const uri = process.env.ATLAS_URI;
+const uri = pocess.env.MONGODB_URI;
 mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex: true});
 
 mongoose.connect(
@@ -28,6 +28,9 @@ mongoose.connect(
     useFindAndModify: false
   }
 );
+
+
+
 
 
 app.listen(PORT, function() {
