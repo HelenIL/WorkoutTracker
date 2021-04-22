@@ -31,11 +31,8 @@ let db = mongoose.connect(
 
 
 
-app.use(router);
-require("./routes/html.js")(app);
 
-app.listen(PORT, () => {
-  console.log(`App running on port ${PORT}!`);
-});
 
-module.exports = db;
+app.listen(PORT, function() {
+    console.log(`App running on port ${PORT}!`);
+  });
