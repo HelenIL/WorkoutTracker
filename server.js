@@ -16,7 +16,7 @@ app.use(express.static("public"));
 app.use(require("./routes/apiRoutes.js"));
 app.use(require("./routes/htmlRoutes.js"));
 
-var uri = process.env.MONGODB_URI;
+var uri = "mongodb+srv://Admin:pass1234@cluster0.28pwf.mongodb.net/workout?retryWrites=true&w=majorityretryWrites=true&w=majority";
 mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true});
 
 mongoose.connect(
