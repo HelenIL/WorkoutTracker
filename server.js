@@ -1,7 +1,7 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
-require('dotenv').config();
+// require('dotenv').config()
 
 const PORT = process.env.PORT || 3020;
 
@@ -16,11 +16,11 @@ app.use(express.static("public"));
 app.use(require("./routes/apiRoutes.js"));
 app.use(require("./routes/htmlRoutes.js"));
 
-var uri = process.env.MONGODB_URI;
-mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true});
+// const uri = process.env.MONGODB_URI;
+// mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true});
 
-let db = mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/workout",
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb://localhost/workout',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
